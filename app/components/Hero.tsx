@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="pt-32 pb-20 px-4">
       <div className="container mx-auto text-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-          Reparación Futurista de Paletas de Pádel
+          Reparación Funcional de Paletas de Pádel
         </h1>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Recupera el rendimiento óptimo de tu paleta con nuestra tecnología de vanguardia y expertos especializados.
