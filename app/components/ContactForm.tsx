@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 type MaterialType = 'carbono' | 'fibra' | 'hibrido' | 'otro' | ''
 type FoamType = 'foam' | 'eva' | 'eva-black' | 'hibrido' | 'otro' | ''
 
-export default function ContactForm() {
+export default function ContactForm() { 
   const [name, setName] = useState("")
   const [message, setMessage] = useState("")
   const [exterior, setExterior] = useState<MaterialType>('')
@@ -34,7 +34,6 @@ export default function ContactForm() {
       setError("Por favor, selecciona el material interior")
       return false
     }
-    // Validación básica contra contenido malicioso
     const maliciousPatterns = /[<>{}]/g
     if (maliciousPatterns.test(name) || maliciousPatterns.test(message)) {
       setError("El mensaje contiene caracteres no permitidos")
@@ -48,7 +47,7 @@ export default function ContactForm() {
     if (!validateForm()) return
 
     const productInfo = `
-Composición de la paleta:
+      Composición de la paleta:
 - Material exterior: ${exterior}
 - Material interior: ${interior}`
 
@@ -130,7 +129,7 @@ Composición de la paleta:
                   { value: 'otro', label: 'Otro' },
                 ].map((option) => (
                   <label key={option.value} className="flex items-center space-x-3 p-2 rounded-lg hover:bg-green-50 transition-colors duration-200">
-                    <input
+                <input
                       type="radio"
                       name="exterior"
                       value={option.value}
@@ -139,7 +138,7 @@ Composición de la paleta:
                       className="w-4 h-4 text-green-600 focus:ring-green-500"
                     />
                     <span className="text-gray-700">{option.label}</span>
-                  </label>
+              </label>
                 ))}
               </div>
             </motion.div>
@@ -161,7 +160,7 @@ Composición de la paleta:
                   { value: 'otro', label: 'Otro' },
                 ].map((option) => (
                   <label key={option.value} className="flex items-center space-x-3 p-2 rounded-lg hover:bg-green-50 transition-colors duration-200">
-                    <input
+                <input
                       type="radio"
                       name="interior"
                       value={option.value}
@@ -170,9 +169,9 @@ Composición de la paleta:
                       className="w-4 h-4 text-green-600 focus:ring-green-500"
                     />
                     <span className="text-gray-700">{option.label}</span>
-                  </label>
+              </label>
                 ))}
-              </div>
+            </div>
             </motion.div>
           </div>
 
@@ -190,16 +189,16 @@ Composición de la paleta:
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <Button 
-              type="button" 
-              onClick={handleWhatsAppClick}
+          <Button 
+            type="button" 
+            onClick={handleWhatsAppClick}
               className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 rounded-xl py-6 shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-            >
+          >
               <span className="flex items-center justify-center text-lg">
-                <Phone className="mr-2 h-5 w-5" /> 
-                Contactar por WhatsApp
-              </span>
-            </Button>
+              <Phone className="mr-2 h-5 w-5" /> 
+              Contactar por WhatsApp
+            </span>
+          </Button>
           </motion.div>
         </motion.form>
       </div>

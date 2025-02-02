@@ -21,10 +21,10 @@ export default function ContactForm() {
 
   const handleWhatsAppClick = () => {
     const productInfo = `
-      Composición de la paleta:
-      Exterior: ${fiberglass ? 'Fibra de vidrio' : ''} ${carbon ? 'Carbono' : ''}
-      Interior: ${foam ? 'Foam' : ''} ${eva ? 'EVA' : ''} ${evaBlack ? 'EVA Black' : ''}
-    `
+Composición de la paleta:
+Exterior: ${fiberglass ? 'Fibra de vidrio' : ''} ${carbon ? 'Carbono' : ''}
+Interior: ${foam ? 'Foam' : ''} ${eva ? 'EVA' : ''} ${evaBlack ? 'EVA Black' : ''}`
+
     const whatsappMessage = `Hola, mi nombre es ${name}. ${message} ${productInfo}`
     window.open(`https://wa.me/5493572541471?text=${encodeURIComponent(whatsappMessage)}`, '_blank')
   }
